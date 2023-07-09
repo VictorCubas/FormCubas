@@ -72,7 +72,7 @@
                     <div *ngIf="studentModel.get('lastName')?.errors?.['required']">Apellido requerido.</div>
                 </div>
 
-                <!-- VALIDACIONES PARA CUANDO EL NOMBRE ES MUY CORTO-->
+                <!-- VALIDACIONES PARA CUANDO EL APELLIDO ES MUY CORTO-->
                 <div *ngIf="studentModel.get('lastName')?.errors && studentModel?.get('lastName')?.touched" class="text-red-400">
                     <div *ngIf="studentModel.get('lastName')?.hasError('minlength') && !studentModel.get('lastName')?.hasError('required')">
                         El apellido debe tener al menos {{ studentModel.get('lastName')?.getError('minlength').requiredLength }} caracteres.
